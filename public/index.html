@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pool Retiring Soon...</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inconsolata'>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+  />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+</head>
+<body>
+
+  <!-- Canvas -->
+<canvas class="orb-canvas"></canvas>
+
+<div class="overlay">
+  <div class="overlay__inner">
+
+    <div id="main">
+      <div class="overlay__btns">
+        <button class="overlay__btn overlay__btn--transparent" id="retiringBtn">Pools Retiring soon</button>
+        <button class="overlay__btn overlay__btn--transparent" id="retiredBtn">Retired Pools</button>
+        <button class="overlay__btn overlay__btn--transparent" onclick="handleDelegate0()">Stake with Enigma</button>
+      </div>
+        <!-- Title -->
+    <h1 class="overlay__title">
+      Brought to you by
+      <span class="text-gradient">Enigma Stake pool</span>
+    </h1>
+     <table id="poolTable">
+          <thead>
+            <tr>
+              <th>Pool ID</th>
+              <th>Pool Name</th>
+              <th>Pool Ticker</th>
+              <th>Live stake</th>
+              <th>Active stake</th>
+              <th>Tweet</th>
+              <th>pool pm</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+ </div>
+</div>
+<div id="root"></div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+  <script type="module" src="./script.js"></script>
+
+  <script>
+    function handleDelegate0() {
+      
+    var link = 'https://cardano-solutions.com/stake?t=FWXCfYBP82NG9ObGKhh1Fsb3Gmk35u&wallet=yoroi,flint,nami,eternl,gerowallet'
+    var width = 600
+    var height = Math.min(800, parseInt(window.outerHeight, 10))
+    var left = (parseInt(window.outerWidth, 10) / 2) - (width / 2)
+    var top = (parseInt(window.outerHeight, 10) - height) / 2
+    window.open(link, 'Delegate', 'width=' + width + ',height=' + height + ',toolbar=0,menubar=0,location=0,status=0,scrollbars=1,resizable=1,left=' + left + ',top=' + top);
+    }
+    </script>
+    <a class="nectar-button large regular extra-color-4 has-icon  regular-button" onclick="handleDelegate0()" style="margin-top: 30px; visibility: visible;" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#825cff"><span>Delegate to Enigm₳ with local wallet</span><i class="fa fa-handshake-o"></i></a>
+
+</body>
+</html>
